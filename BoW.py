@@ -36,3 +36,26 @@ for data in dataset:
 X = np.asarray(X)
 print("Dhruv Varshney \nA2305221157")
 print(X)
+
+
+from nltk.stem import PorterStemmer
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+
+# Example text
+text = "running cats"
+
+# Tokenize the text into individual words
+tokens = word_tokenize(text)
+
+# Stemming
+stemmer = PorterStemmer()
+stemmed_words = [stemmer.stem(word) for word in tokens]
+
+print("Stemmed words:", stemmed_words)
+
+# Lemmatization
+lemmatizer = WordNetLemmatizer()
+lemmatized_words = [lemmatizer.lemmatize(word) for word in tokens]
+
+print("Lemmatized words:", lemmatized_words)
